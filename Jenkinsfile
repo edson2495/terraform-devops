@@ -3,6 +3,7 @@ pipeline {
     agent {
         docker {
             image 'hashicorp/terraform:1.14.5'
+            args '--entrypoint=""'
         }
     }
 
@@ -10,7 +11,7 @@ pipeline {
 
         stage('terraform') {
             steps {
-                sh 'terraform init'
+                sh 'terraform --version'
             }
         }
 
