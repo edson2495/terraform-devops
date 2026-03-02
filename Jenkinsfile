@@ -7,6 +7,10 @@ pipeline {
         }
     }
 
+    options {
+        ansiColor('xterm')
+    } 
+
     parameters {
         choice(name: 'action', choices: ['select', 'apply', 'destroy'], description: 'Terraform action')
     }
