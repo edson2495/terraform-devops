@@ -2,7 +2,7 @@ resource "aws_instance" "amazon_linux" {
   ami           = "ami-0320940581663281e"
   instance_type = "t2.medium"
 
-  key_name = "aws-keypair"
+  key_name      = "terraform-keypair"
 
   vpc_security_group_ids = [aws_security_group.amazon_linux_sg.id]
 
